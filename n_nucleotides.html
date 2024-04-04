@@ -14,26 +14,27 @@
 
 
 <body>
-  <h1>npeptides</h1>
+  <h1>n_nucleotide</h1>
   
   <h2>Description</h2>
-  <p>Before addressing this exercise, you should have solved <a href="dipeptides.html">dipeptides</a> and <a href="dipeptides.html">tetrapeptides</a>.
+  <p>Before addressing this exercise, you should have solved <a href="dinuclotides.html">dinuclotides</a> and <a href="tetranucleotides.html">tetranucleotides</a>.
 
     Write a function <b>npeptides(res, n)</b> that takes as input the residues to combine (res) and the length of the peptides to generate(n) and returns dipeptides, tripeptides, ... as requested.
     The function should call another function <b>build_peptides(res, peptides)</b> that enlarges the peptides provided with one letter from res. See the <b>Tests</b>.
 
-
-
+    Do not use <b>itertools</b>.
 </p>
 
+<!--
 <h2>Hint</h2>
 <p> 
 </p>
 <pre><code> 
 </code></pre>
-
+-->
   <h2>Tests</h2>
-  <pre>    >>> build_peptides('A', [])
+  <pre>
+    >>> build_peptides('A', [])
     ['A']
     >>> build_peptides('LY', ['A', 'L'])
     ['AL', 'AY', 'LL', 'LY']
