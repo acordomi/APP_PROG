@@ -20,7 +20,8 @@
   <h1>prot_to_gene</h1>
   
   <h2>Description</h2>
-  <p> Write a function <b>prot2gene(protein_name)</b> that, given a protein entry name, returns its (standard) gene name.
+  <p> Write a function <b>prot2gene(uniprot_name)</b> that, given a Uniprot Entry Name (ex. CNR1_HUMAN) 
+    or an Accession (ex. P21554), returns its (standard) gene name.
     
 </p>
 <h2>Hint</h2>
@@ -28,16 +29,22 @@
 <pre><code>
 </code></pre>
 -->
-<p>You may use Biopython's SwissProt tools or create your own
+<p>Use requests. Protein info in Uniprot can be obtained from
+  https://rest.uniprot.org/uniprotkb/XXXXXX.txt, with XXXXXX being the Uniprot Entry Name or the Accession.
 </p>
 
 <h2>Tests</h2>
-  <pre>    >>> prot2gene("PACR_BOVIN")
+  <pre>
+    >>> prot2gene("PACR_BOVIN")
     'ADCYAP1R1'
     >>> prot2gene("")
-    ''
+
     >>> prot2gene("AAAAA_HUMAN")
-    ''
+
+    >>> prot2gene("P21554")
+    'CNR1'
+    >>> prot2gene("CNR1_HUMAN")
+    'CNR1'
 </pre >
 
   <hr>
